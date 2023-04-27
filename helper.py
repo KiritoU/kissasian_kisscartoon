@@ -622,6 +622,7 @@ class Helper:
         return res
 
     def get_othername_from(self, barContentInfo: BeautifulSoup) -> str:
+        res = ""
         try:
             for p in barContentInfo.find_all("p"):
                 if p.find("span"):

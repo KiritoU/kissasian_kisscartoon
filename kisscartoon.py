@@ -113,9 +113,7 @@ class Kisscartoon:
                 "hot": 0,
                 "content": post_data.get("description", ""),
                 "type": post_data.get("post_type", ""),
-                "status": "Ongoing"
-                if self.film["post_type"] != "single"
-                else "Completed",
+                "status": post_data.get("status", "Ongoing"),
                 "public": 1,
                 "slug": slugify(post_data.get("title", "")),
                 "time": timeupdate.strftime("%Y-%m-%d %H:%M:%S"),
